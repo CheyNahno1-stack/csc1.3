@@ -39,6 +39,7 @@
             colDescription = new DataGridViewTextBoxColumn();
             colAmount = new DataGridViewTextBoxColumn();
             lblTotal = new Label();
+            bttnRemoveExpense = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvExpense).BeginInit();
             SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             // btnSumit
             // 
             btnSumit.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnSumit.Location = new Point(250, 346);
+            btnSumit.Location = new Point(109, 349);
             btnSumit.Name = "btnSumit";
             btnSumit.Size = new Size(146, 30);
             btnSumit.TabIndex = 2;
@@ -142,11 +143,26 @@
             lblTotal.TabIndex = 8;
             lblTotal.Text = "label1";
             // 
+            // bttnRemoveExpense
+            // 
+            bttnRemoveExpense.Font = new Font("Modern No. 20", 11.9999981F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            bttnRemoveExpense.Location = new Point(320, 354);
+            bttnRemoveExpense.Name = "bttnRemoveExpense";
+            bttnRemoveExpense.Size = new Size(75, 23);
+            bttnRemoveExpense.TabIndex = 9;
+            bttnRemoveExpense.Text = "Remove Expense";
+            bttnRemoveExpense.UseVisualStyleBackColor = true;
+            bttnRemoveExpense.Click += bttnRemoveExpense_Click;
+            
+
+
+            // 
             // xpenseTrcker
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(bttnRemoveExpense);
             Controls.Add(lblTotal);
             Controls.Add(dgvExpense);
             Controls.Add(lblTotalExpenses);
@@ -176,5 +192,6 @@
         private DataGridViewTextBoxColumn colDescription;
         private DataGridViewTextBoxColumn colAmount;
         private Label lblTotal;
+        private Button bttnRemoveExpense;
     }
 }
